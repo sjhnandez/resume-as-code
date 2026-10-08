@@ -17,7 +17,7 @@
   "sections": {
     "profile": {
       "title": "Profile",
-      "text": "Software engineer with 3+ years building high-performance, accessible web and mobile apps in TypeScript, React, React Native, and Flutter. At Visa, shipped real-time dashboards and authentication flows serving millions of users; currently builds and operates a self-hosted AI and infrastructure platform (LLM gateway, GPU inference, IaC)."
+      "text": "Software engineer with 3+ years building performant, accessible web and mobile apps in TypeScript, React, React Native, and Flutter. At Visa, shipped real-time dashboards and authentication flows serving millions of users; currently builds and operates a self-hosted AI and infrastructure platform (LLM gateway, GPU inference, IaC)."
     },
     "skills": {
       "title": "Technical Skills",
