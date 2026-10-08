@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "lang": "en",
+    "title": "Sebastian Hernandez — Software Engineer",
+    "description": "Software engineer building performant, accessible web and mobile apps in React, TypeScript, React Native, and Flutter — and a self-hosted AI and infrastructure platform (LLM gateway, GPU inference, IaC).",
+    "site": "https://profile.superseb.xyz"
+  },
+  "name": "Sebastian Hernandez",
+  "role": "Software Engineer",
+  "contacts": [
+    { "id": "email", "label": "shnandezp@proton.me", "href": "mailto:shnandezp@proton.me" },
+    { "id": "phone", "label": "(813) 709-0967", "href": "tel:+18137090967" },
+    { "id": "location", "label": "Tamarac, FL" },
+    { "id": "linkedin", "label": "linkedin.com/in/sj-hnandez", "href": "https://linkedin.com/in/sj-hnandez" },
+    { "id": "github", "label": "github.com/sjhnandez", "href": "https://github.com/sjhnandez" }
+  ],
+  "sections": {
+    "profile": {
+      "title": "Profile",
+      "text": "Software engineer with 3+ years building performant, accessible web and mobile apps in TypeScript, React, React Native, and Flutter. At Visa, shipped real-time dashboards and authentication flows serving millions of users; currently builds and operates a self-hosted AI and infrastructure platform (LLM gateway, GPU inference, IaC)."
+    },
+    "skills": {
+      "title": "Technical Skills",
+      "groups": [
+        { "id": "infra-ai", "label": "Infrastructure & AI", "items": ["Docker", "Terraform", "Cloudflare Zero Trust", "Linux", "LiteLLM", "Ollama"] },
+        { "id": "languages", "label": "Languages", "items": ["TypeScript", "JavaScript", "HTML", "CSS", "Dart", "Python", "Java", "SQL", "GraphQL"] },
+        { "id": "frontend", "label": "Frontend", "items": ["React", "Next.js", "Redux", "Tailwind CSS", "Radix UI", "React Hook Form", "Zod", "SWR", "Vite"] },
+        { "id": "mobile", "label": "Mobile", "items": ["React Native", "Expo Router", "Reanimated", "NativeWind", "Flutter"] },
+        { "id": "backend", "label": "Backend & APIs", "items": ["Node.js", "Spring Boot", "REST APIs", "Firebase", "Cloud Firestore", "PostgreSQL", "MySQL", "MongoDB"] },
+        { "id": "testing", "label": "Testing & Tooling", "items": ["Jest", "ESLint", "Prettier", "Git", "Bash", "Splunk", "Prometheus", "Grafana"] },
+        { "id": "spoken", "label": "Spoken Languages", "items": ["English (Fluent)", "Spanish (Native)"] }
+      ]
+    },
+    "experience": {
+      "title": "Experience",
+      "entries": [
+        {
+          "id": "waytrek",
+          "title": "Founding Software Engineer",
+          "dates": "April 2025 - April 2026",
+          "org": "Waytrek LLC.",
+          "bullets": [
+            "Built React Native apps (authentication, profiles, search) in TypeScript with Expo Router and NativeWind.",
+            "Developed a React + Vite admin panel; enforced code quality with ESLint, Prettier, and Zod.",
+            "Patched the backend API to unblock frontend delivery."
+          ]
+        },
+        {
+          "id": "visa",
+          "title": "Software Engineer",
+          "dates": "July 2022 - February 2025",
+          "org": "Visa Inc.",
+          "meta": "Miami, United States",
+          "bullets": [
+            "Developed a React dashboard for real-time payment approval-rate monitoring across 15+ issuer clients, with configurable threshold alerts via email and in-app notifications.",
+            "Built a Flutter mobile demo app showcasing a peer-to-peer payments SDK for key stakeholder meetings in Chile, supporting regional business development.",
+            "Implemented WCAG accessibility support in the Visa Go Flutter app for the 2024 Paris Olympics, remediating gaps across a 30K+ user global audience and presenting findings to an internal accessibility expert.",
+            "Contributed to Visa Consumer Authentication Service (VCAS) in Java and Spring Boot, strengthening 3DS authentication for 10M+ cardholders; adapted platform APIs to Latin America partner requirements.",
+            "Earned 10+ Achievers Awards and reduced technical debt on legacy codebases 10+ years old."
+          ]
+        }
+      ]
+    },
+    "projects": {
+      "title": "Projects",
+      "entries": [
+        {
+          "id": "ai-platform",
+          "title": "Self-Hosted AI Platform",
+          "resumeTitle": "Self-hosted AI & Infrastructure",
+          "inResume": true,
+          "summary": "A multi-provider LLM gateway, self-hosted GPU inference, and an on-demand ASR worker — engineered around one 8 GB GPU.",
+          "tags": ["LiteLLM", "Ollama", "Python", "Docker", "RAG"],
+          "links": [],
+          "bullets": [
+            "Multi-provider LLM gateway (LiteLLM) with automatic failover; Python automation live-probes a synced model catalog to filter dead or gated models, verified by a mock-provider harness.",
+            "Self-hosted GPU inference (Ollama, Open WebUI, search-grounded RAG) tuned to keep 9B-class models fully GPU-resident on an 8GB card via KV-cache quantization and measured context sizing.",
+            "On-demand ASR gateway (Python, Docker SDK): wakes a GPU transcription worker on request (~3s) and reclaims ~1.4GB RAM when idle; ~28x realtime."
+          ]
+        },
+        {
+          "id": "homelab-iac",
+          "title": "Homelab Infrastructure as Code",
+          "resumeTitle": "Self-hosted AI & Infrastructure",
+          "inResume": true,
+          "summary": "25+ services kept running as code: Docker Compose stacks, monitoring, backups, and Zero Trust remote access provisioned with Terraform.",
+          "tags": ["Terraform", "Docker Compose", "Cloudflare Zero Trust", "Linux"],
+          "links": [],
+          "bullets": [
+            "25+ containerized services across Docker Compose stacks (DNS ad-blocking, monitoring, backups, label-scoped auto-healing); Zero Trust remote access as code via Terraform (Cloudflare provider v5)."
+          ]
+        },
+        {
+          "id": "resume-as-code",
+          "title": "Resume as Code",
+          "inResume": false,
+          "summary": "This site: one JSON content source renders both the Typst CV PDFs and the React page, shipped by a post-commit deploy pipeline.",
+          "tags": ["Typst", "React", "Vite", "Docker", "Git hooks"],
+          "links": [],
+          "bullets": [
+            "One JSON source of truth feeds the Typst-built CV PDFs and this web page, so the site and the downloads can never drift apart.",
+            "A git post-commit hook compiles the PDFs, content-hashes them, builds the site, and swaps it live — zero manual steps."
+          ]
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "entries": [
+        {
+          "id": "ms-harrisburg",
+          "title": "M.S., Information Systems Engineering and Management",
+          "dates": "In progress",
+          "org": "Harrisburg University of Science and Technology",
+          "meta": "Harrisburg, PA",
+          "bullets": []
+        },
+        {
+          "id": "bs-usf",
+          "title": "B.S., Computer Science",
+          "org": "University of South Florida",
+          "meta": "Tampa, FL | GPA 3.66 | International Transfer Scholarship",
+          "bullets": []
+        },
+        {
+          "id": "bs-uninorte",
+          "title": "B.S., Systems and Computational Engineering",
+          "org": "Universidad del Norte",
+          "meta": "Barranquilla, Colombia | GPA 3.47 | Full-ride scholarship for national standardized test performance",
+          "bullets": []
+        }
+      ]
+    }
+  }
+}

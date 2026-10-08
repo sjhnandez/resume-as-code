@@ -1,0 +1,38 @@
+{
+  "name": "profile",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "profile.superseb.xyz - one JSON content source feeds both the Typst CV PDFs and this React page.",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "dev": "NODE_PUBLISH=127.0.0.1:5173:5173 bash scripts/node.sh npm run dev:inner",
+    "dev:inner": "vite --host",
+    "preview": "bash scripts/node.sh npm run preview:inner",
+    "preview:inner": "vite preview --outDir dist --host",
+    "typecheck": "tsc -b",
+    "build": "npm run typecheck && vite build",
+    "build:cv": "bash scripts/build-cv.sh",
+    "deploy": "bash scripts/deploy.sh"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "@fontsource-variable/space-grotesk": "^5.3.0",
+    "motion": "^14.0.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
+  }
+}

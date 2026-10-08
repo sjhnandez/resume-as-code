@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "lang": "es",
+    "title": "Sebastian Hernandez — Ingeniero de software",
+    "description": "Ingeniero de software construyendo aplicaciones web y móviles de alto rendimiento y accesibles en React, TypeScript, React Native y Flutter — y una plataforma autoalojada de IA e infraestructura (gateway LLM, inferencia GPU, IaC).",
+    "site": "https://profile.superseb.xyz"
+  },
+  "name": "Sebastian Hernandez",
+  "role": "Ingeniero de software",
+  "contacts": [
+    { "id": "email", "label": "shnandezp@proton.me", "href": "mailto:shnandezp@proton.me" },
+    { "id": "phone", "label": "(813) 709-0967", "href": "tel:+18137090967" },
+    { "id": "location", "label": "Tamarac, FL, EE. UU." },
+    { "id": "linkedin", "label": "linkedin.com/in/sj-hnandez", "href": "https://linkedin.com/in/sj-hnandez" },
+    { "id": "github", "label": "github.com/sjhnandez", "href": "https://github.com/sjhnandez" }
+  ],
+  "sections": {
+    "profile": {
+      "title": "Perfil profesional",
+      "text": "Ingeniero de software con más de 3 años construyendo aplicaciones web y móviles de alto rendimiento y accesibles con TypeScript, React, React Native y Flutter. En Visa desarrollé paneles en tiempo real y flujos de autenticación para millones de usuarios; actualmente construyo y opero una plataforma autoalojada de IA e infraestructura (gateway LLM, inferencia GPU, IaC)."
+    },
+    "skills": {
+      "title": "Habilidades técnicas",
+      "groups": [
+        { "id": "infra-ai", "label": "Infraestructura e IA", "items": ["Docker", "Terraform", "Cloudflare Zero Trust", "Linux", "LiteLLM", "Ollama"] },
+        { "id": "languages", "label": "Lenguajes de programación", "items": ["TypeScript", "JavaScript", "HTML", "CSS", "Dart", "Python", "Java", "SQL", "GraphQL"] },
+        { "id": "frontend", "label": "Frontend", "items": ["React", "Next.js", "Redux", "Tailwind CSS", "Radix UI", "React Hook Form", "Zod", "SWR", "Vite"] },
+        { "id": "mobile", "label": "Móvil", "items": ["React Native", "Expo Router", "Reanimated", "NativeWind", "Flutter"] },
+        { "id": "backend", "label": "Backend y APIs", "items": ["Node.js", "Spring Boot", "REST APIs", "Firebase", "Cloud Firestore", "PostgreSQL", "MySQL", "MongoDB"] },
+        { "id": "testing", "label": "Pruebas y herramientas", "items": ["Jest", "ESLint", "Prettier", "Git", "Bash", "Splunk", "Prometheus", "Grafana"] },
+        { "id": "spoken", "label": "Idiomas", "items": ["inglés (fluido)", "español (nativo)"] }
+      ]
+    },
+    "experience": {
+      "title": "Experiencia profesional",
+      "entries": [
+        {
+          "id": "waytrek",
+          "title": "Ingeniero de software fundador",
+          "dates": "Abril 2025 - Abril 2026",
+          "org": "Waytrek LLC.",
+          "bullets": [
+            "Desarrollé aplicaciones React Native (autenticación, perfiles, búsqueda) en TypeScript con Expo Router y NativeWind.",
+            "Construí un panel de administración en React + Vite; aseguré la calidad del código con ESLint, Prettier y Zod.",
+            "Corregí la API del backend para desbloquear la entrega del frontend."
+          ]
+        },
+        {
+          "id": "visa",
+          "title": "Ingeniero de software",
+          "dates": "Julio 2022 - Febrero 2025",
+          "org": "Visa Inc.",
+          "meta": "Miami, Estados Unidos",
+          "bullets": [
+            "Desarrollé un panel en React para monitorear en tiempo real la tasa de aprobación de pagos de más de 15 clientes emisores, con alertas de umbral configurables por correo electrónico y notificaciones en la aplicación.",
+            "Construí una aplicación móvil de demostración en Flutter para mostrar un SDK de pagos entre pares en reuniones con actores clave en Chile, apoyando el desarrollo de negocio regional.",
+            "Implementé soporte de accesibilidad WCAG en la aplicación Flutter Visa Go para los Juegos Olímpicos de París 2024; corregí deficiencias para una audiencia global de más de 30.000 usuarios y presenté los hallazgos a un experto interno en accesibilidad.",
+            "Contribuí al Visa Consumer Authentication Service (VCAS) en Java y Spring Boot; fortalecí la autenticación 3DS para más de 10 millones de tarjetahabientes y adapté las APIs de la plataforma a los requisitos de socios en América Latina.",
+            "Obtuve más de 10 Achievers Awards y reduje la deuda técnica en bases de código de más de 10 años."
+          ]
+        }
+      ]
+    },
+    "projects": {
+      "title": "Proyectos",
+      "entries": [
+        {
+          "id": "ai-platform",
+          "title": "Plataforma de IA autoalojada",
+          "resumeTitle": "IA e infraestructura autoalojadas",
+          "inResume": true,
+          "summary": "Un gateway LLM multiproveedor, inferencia GPU autoalojada y un trabajador ASR bajo demanda, todo ajustado a una GPU de 8 GB.",
+          "tags": ["LiteLLM", "Ollama", "Python", "Docker", "RAG"],
+          "links": [],
+          "bullets": [
+            "Gateway LLM multiproveedor (LiteLLM) con conmutación por error automática; una automatización en Python sondea en vivo un catálogo de modelos sincronizado para filtrar modelos caídos o restringidos, verificada con un banco de pruebas de proveedores simulados.",
+            "Inferencia GPU autoalojada (Ollama, Open WebUI, RAG con búsqueda) optimizada para mantener modelos de clase 9B completamente en la GPU de una tarjeta de 8 GB mediante cuantización de la caché KV y dimensionamiento del contexto basado en mediciones.",
+            "Gateway ASR (reconocimiento automático de voz) bajo demanda (Python, Docker SDK): activa en ~3 s un contenedor de transcripción en GPU y libera ~1,4 GB de RAM cuando queda inactivo; procesa ~28 veces más rápido que en tiempo real."
+          ]
+        },
+        {
+          "id": "homelab-iac",
+          "title": "Infraestructura de homelab como código",
+          "resumeTitle": "IA e infraestructura autoalojadas",
+          "inResume": true,
+          "summary": "Más de 25 servicios funcionando como código: stacks de Docker Compose, monitoreo, copias de seguridad y acceso remoto Zero Trust provisionado con Terraform.",
+          "tags": ["Terraform", "Docker Compose", "Cloudflare Zero Trust", "Linux"],
+          "links": [],
+          "bullets": [
+            "Operación de más de 25 servicios en contenedores, organizados en stacks de Docker Compose (bloqueo de anuncios por DNS, monitoreo, copias de seguridad, auto-reparación basada en etiquetas); acceso remoto Zero Trust definido como código con Terraform (proveedor Cloudflare v5)."
+          ]
+        },
+        {
+          "id": "resume-as-code",
+          "title": "Currículum como código",
+          "inResume": false,
+          "summary": "Este sitio: una única fuente de contenido JSON genera los PDF en Typst y la página en React, desplegados por un pipeline automático tras cada commit.",
+          "tags": ["Typst", "React", "Vite", "Docker", "Git hooks"],
+          "links": [],
+          "bullets": [
+            "Una única fuente JSON alimenta los PDF del currículum en Typst y esta página web, para que el sitio y las descargas nunca diverjan.",
+            "Un hook post-commit de git compila los PDF, les asigna un hash de contenido, construye el sitio y lo publica en vivo, sin pasos manuales."
+          ]
+        }
+      ]
+    },
+    "education": {
+      "title": "Educación",
+      "entries": [
+        {
+          "id": "ms-harrisburg",
+          "title": "Maestría en Ingeniería y Gestión de Sistemas de Información",
+          "dates": "En curso",
+          "org": "Harrisburg University of Science and Technology",
+          "meta": "Harrisburg, PA, EE. UU.",
+          "bullets": []
+        },
+        {
+          "id": "bs-usf",
+          "title": "Licenciatura en Ciencias de la Computación",
+          "org": "University of South Florida",
+          "meta": "Tampa, FL, EE. UU. | Promedio 3.66 | Beca de transferencia internacional",
+          "bullets": []
+        },
+        {
+          "id": "bs-uninorte",
+          "title": "Ingeniería de Sistemas y Computación",
+          "org": "Universidad del Norte",
+          "meta": "Barranquilla, Colombia | Promedio 3.47 | Beca completa por mérito en pruebas nacionales",
+          "bullets": []
+        }
+      ]
+    }
+  }
+}
