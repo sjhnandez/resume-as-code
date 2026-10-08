@@ -21,8 +21,7 @@ export function Footer() {
           </div>
           <ContactChips />
         </div>
-        <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-line/40 pt-6">
-          <p className="font-mono text-xs text-dim">{t.footer.built}</p>
+        <div className="mt-10 flex flex-wrap items-center justify-end gap-4 border-t border-line/40 pt-6">
           <a
             href="#top"
             className="inline-flex items-center gap-1.5 text-xs text-muted transition hover:text-ink"

@@ -24,7 +24,6 @@ export interface UiStrings {
     other: string
   }
   footer: {
-    built: string
     backToTop: string
   }
 }
@@ -44,7 +43,6 @@ export const ui: Record<Lang, UiStrings> = {
     hero: { greeting: "Hello, I'm" },
     cv: { download: 'Download CV', other: 'CV in Spanish' },
     footer: {
-      built: 'One JSON source → Typst PDFs + this React page. Auto-deployed on every commit.',
       backToTop: 'Back to top',
     },
   },
@@ -62,7 +60,6 @@ export const ui: Record<Lang, UiStrings> = {
     hero: { greeting: 'Hola, soy' },
     cv: { download: 'Descargar CV', other: 'CV en inglés' },
     footer: {
-      built: 'Una única fuente JSON → PDF en Typst + esta página React. Desplegado automáticamente con cada commit.',
       backToTop: 'Volver arriba',
     },
   },
