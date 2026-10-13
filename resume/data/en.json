@@ -71,7 +71,7 @@
           "inResume": true,
           "summary": "A multi-provider LLM gateway, self-hosted GPU inference, and an on-demand ASR worker — engineered around one 8 GB GPU.",
           "tags": ["LiteLLM", "Ollama", "Python", "Docker", "RAG"],
-          "links": [{"label": "homelab-ai-stack", "href": "https://github.com/sjhnandez/homelab-ai-stack"}, {"label": "subgen-gateway", "href": "https://github.com/sjhnandez/subgen-gateway"}],
+          "links": [{"label": "homelab-ai-stack", "href": "https://github.com/sjhnandez/homelab-ai-stack"}, {"label": "subgen-gateway", "href": "https://github.com/sjhnandez/subgen-gateway"}, {"label": "routing-lab — fault-injection testbench for the LLM router", "href": "https://github.com/sjhnandez/routing-lab"}],
           "bullets": [
             "Multi-provider LLM gateway (LiteLLM) with automatic failover; Python automation live-probes a synced model catalog to filter dead or gated models, verified by a mock-provider harness.",
             "Self-hosted GPU inference (Ollama, Open WebUI, search-grounded RAG) tuned to keep 9B-class models fully GPU-resident on an 8GB card via KV-cache quantization and measured context sizing.",
