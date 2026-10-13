@@ -1,4 +1,5 @@
 import { content } from '../content'
+import { badgesForRepo } from '../lib/badges'
 import { useLang } from '../lib/lang'
 import { ExternalLinkIcon } from './Icons'
 import { Reveal } from './Reveal'
@@ -43,19 +44,42 @@ export function Projects() {
                 ) : null}
                 {p.links?.length ? (
                   <ul className="mt-3 flex flex-wrap gap-4">
-                    {p.links.map((l) => (
-                      <li key={l.href}>
-                        <a
-                          href={l.href}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="inline-flex items-center gap-1.5 text-xs text-accent transition hover:text-ink"
-                        >
-                          {l.label}
-                          <ExternalLinkIcon className="h-3 w-3" />
-                        </a>
-                      </li>
-                    ))}
+                    {p.links.map((l) => {
+                      const badges = badgesForRepo(l.href)
+                      return (
+                        <li key={l.href}>
+                          <a
+                            href={l.href}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-1.5 text-xs text-accent transition hover:text-ink"
+                          >
+                            {l.label}
+                            <ExternalLinkIcon className="h-3 w-3" />
+                          </a>
+                          {badges.length ? (
+                            <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
+                              {badges.map((b) => (
+                                <a
+                                  key={b.src}
+                                  href={b.href}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  title={b.alt}
+                                >
+                                  <img
+                                    src={b.src}
+                                    alt={b.alt}
+                                    loading="lazy"
+                                    className="h-4 w-auto opacity-80 transition group-hover:opacity-100"
+                                  />
+                                </a>
+                              ))}
+                            </div>
+                          ) : null}
+                        </li>
+                      )
+                    })}
                   </ul>
                 ) : null}
               </div>
