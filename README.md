@@ -1,5 +1,8 @@
 # profile.superseb.xyz
 
+[![CI](https://github.com/sjhnandez/resume-as-code/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/sjhnandez/resume-as-code/actions/workflows/ci.yml)
+[![Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sjhnandez/resume-as-code/badges/coverage.json)](https://github.com/sjhnandez/resume-as-code/actions/workflows/ci.yml)
+
 Single-page profile site + resume pipeline for Sebastian Hernandez.
 
 **One canonical content source** — `resume/data/{en,es}.json` — generates both the

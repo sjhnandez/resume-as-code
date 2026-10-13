@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests with coverage
+        run: npm run test:coverage
+
+      # Self-contained coverage badge: write shields.io endpoint JSON and push
+      # it alone to the orphan `badges` branch (never on pull requests).
+      - name: Publish coverage badge
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          node <<'EOF'
+          const fs = require('fs')
+          const summary = JSON.parse(fs.readFileSync('coverage/coverage-summary.json', 'utf8'))
+          const pct = Math.round(summary.total.lines.pct)
+          const color = pct >= 80 ? 'green' : pct >= 60 ? 'yellowgreen' : pct >= 40 ? 'yellow' : 'red'
+          const badge = { schemaVersion: 1, label: 'coverage', message: `${pct}%`, color }
+          fs.writeFileSync('/tmp/coverage.json', JSON.stringify(badge) + '\n')
+          EOF
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git checkout --orphan badges
+          git rm -rf .
+          cp /tmp/coverage.json coverage.json
+          git add coverage.json
+          git commit -m 'chore: update coverage badge'
+          git push -f origin badges
+
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Build
+        run: npm run build
