@@ -71,7 +71,7 @@
           "inResume": true,
           "summary": "A multi-provider LLM gateway, self-hosted GPU inference, and an on-demand ASR worker — engineered around one 8 GB GPU.",
           "tags": ["LiteLLM", "Ollama", "Python", "Docker", "RAG"],
-          "links": [],
+          "links": [{"label": "homelab-ai-stack", "href": "https://github.com/sjhnandez/homelab-ai-stack"}, {"label": "subgen-gateway", "href": "https://github.com/sjhnandez/subgen-gateway"}],
           "bullets": [
             "Multi-provider LLM gateway (LiteLLM) with automatic failover; Python automation live-probes a synced model catalog to filter dead or gated models, verified by a mock-provider harness.",
             "Self-hosted GPU inference (Ollama, Open WebUI, search-grounded RAG) tuned to keep 9B-class models fully GPU-resident on an 8GB card via KV-cache quantization and measured context sizing.",
@@ -85,7 +85,7 @@
           "inResume": true,
           "summary": "25+ services kept running as code: Docker Compose stacks, monitoring, backups, and Zero Trust remote access provisioned with Terraform.",
           "tags": ["Terraform", "Docker Compose", "Cloudflare Zero Trust", "Linux"],
-          "links": [],
+          "links": [{"label": "homelab-terraform", "href": "https://github.com/sjhnandez/homelab-terraform"}],
           "bullets": [
             "25+ containerized services across Docker Compose stacks (DNS ad-blocking, monitoring, backups, label-scoped auto-healing); Zero Trust remote access as code via Terraform (Cloudflare provider v5)."
           ]
@@ -96,7 +96,7 @@
           "inResume": false,
           "summary": "This site: one JSON content source renders both the Typst CV PDFs and the React page, shipped by a post-commit deploy pipeline.",
           "tags": ["Typst", "React", "Vite", "Docker", "Git hooks"],
-          "links": [],
+          "links": [{"label": "resume-as-code", "href": "https://github.com/sjhnandez/resume-as-code"}],
           "bullets": [
             "One JSON source of truth feeds the Typst-built CV PDFs and this web page, so the site and the downloads can never drift apart.",
             "A git post-commit hook compiles the PDFs, content-hashes them, builds the site, and swaps it live — zero manual steps."

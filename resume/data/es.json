@@ -71,7 +71,7 @@
           "inResume": true,
           "summary": "Un gateway LLM multiproveedor, inferencia GPU autoalojada y un trabajador ASR bajo demanda, todo ajustado a una GPU de 8 GB.",
           "tags": ["LiteLLM", "Ollama", "Python", "Docker", "RAG"],
-          "links": [],
+          "links": [{"label": "homelab-ai-stack", "href": "https://github.com/sjhnandez/homelab-ai-stack"}, {"label": "subgen-gateway", "href": "https://github.com/sjhnandez/subgen-gateway"}],
           "bullets": [
             "Gateway LLM multiproveedor (LiteLLM) con conmutación por error automática; una automatización en Python sondea en vivo un catálogo de modelos sincronizado para filtrar modelos caídos o restringidos, verificada con un banco de pruebas de proveedores simulados.",
             "Inferencia GPU autoalojada (Ollama, Open WebUI, RAG con búsqueda) optimizada para mantener modelos de clase 9B completamente en la GPU de una tarjeta de 8 GB mediante cuantización de la caché KV y dimensionamiento del contexto basado en mediciones.",
@@ -85,7 +85,7 @@
           "inResume": true,
           "summary": "Más de 25 servicios funcionando como código: stacks de Docker Compose, monitoreo, copias de seguridad y acceso remoto Zero Trust provisionado con Terraform.",
           "tags": ["Terraform", "Docker Compose", "Cloudflare Zero Trust", "Linux"],
-          "links": [],
+          "links": [{"label": "homelab-terraform", "href": "https://github.com/sjhnandez/homelab-terraform"}],
           "bullets": [
             "Operación de más de 25 servicios en contenedores, organizados en stacks de Docker Compose (bloqueo de anuncios por DNS, monitoreo, copias de seguridad, auto-reparación basada en etiquetas); acceso remoto Zero Trust definido como código con Terraform (proveedor Cloudflare v5)."
           ]
@@ -96,7 +96,7 @@
           "inResume": false,
           "summary": "Este sitio: una única fuente de contenido JSON genera los PDF en Typst y la página en React, desplegados por un pipeline automático tras cada commit.",
           "tags": ["Typst", "React", "Vite", "Docker", "Git hooks"],
-          "links": [],
+          "links": [{"label": "resume-as-code", "href": "https://github.com/sjhnandez/resume-as-code"}],
           "bullets": [
             "Una única fuente JSON alimenta los PDF del currículum en Typst y esta página web, para que el sitio y las descargas nunca diverjan.",
             "Un hook post-commit de git compila los PDF, les asigna un hash de contenido, construye el sitio y lo publica en vivo, sin pasos manuales."
