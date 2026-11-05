@@ -10,7 +10,7 @@ export function About() {
   return (
     <Section id="about" index="01" title={d.sections.profile.title}>
       <Reveal>
-        <p className="max-w-3xl text-lg leading-relaxed text-muted sm:text-xl">
+        <p className="max-w-3xl font-display text-2xl leading-[1.3] text-pretty sm:text-[2rem]">
           {d.sections.profile.text}
         </p>
       </Reveal>

@@ -2,20 +2,21 @@ import { content } from '../content'
 import { useLang } from '../lib/lang'
 import { iconFor } from './Icons'
 
-const chip =
-  'inline-flex items-center gap-2 rounded-full border border-line px-3 py-1.5 text-xs text-muted transition hover:border-accent/50 hover:text-ink sm:px-3.5 sm:text-sm'
+// Colors inherit, so the same row works on the paper hero and the dark footer.
+const item = 'inline-flex items-center gap-2 text-sm'
+const link = `${item} underline decoration-current/30 underline-offset-4 transition-colors hover:decoration-current`
 
 export function ContactChips() {
   const { lang } = useLang()
   const d = content[lang]
 
   return (
-    <ul className="flex flex-wrap items-center gap-2">
+    <ul className="flex flex-wrap items-center gap-x-5 gap-y-2">
       {d.contacts.map((c) => {
         const Icon = iconFor(c.id)
         const body = (
           <>
-            <Icon className="h-3.5 w-3.5 shrink-0 text-accent" />
+            <Icon className="h-3.5 w-3.5 shrink-0" />
             {c.label}
           </>
         )
@@ -25,14 +26,14 @@ export function ContactChips() {
             {c.href ? (
               <a
                 href={c.href}
-                className={chip}
+                className={link}
                 target={isExternal ? '_blank' : undefined}
                 rel={isExternal ? 'noreferrer' : undefined}
               >
                 {body}
               </a>
             ) : (
-              <span className={chip}>{body}</span>
+              <span className={item}>{body}</span>
             )}
           </li>
         )

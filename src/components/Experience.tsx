@@ -9,27 +9,23 @@ export function Experience() {
 
   return (
     <Section id="experience" index="02" title={s.title}>
-      <ol className="relative space-y-10 border-l border-line pl-6 sm:pl-8">
+      <ol className="divide-y divide-line">
         {s.entries.map((e, i) => (
-          <li key={e.id} className="relative">
-            <span
-              aria-hidden="true"
-              className="absolute top-1.5 -left-[31px] h-3.5 w-3.5 rounded-full border-2 border-bg bg-linear-to-br from-accent to-accent2 sm:-left-[39px]"
-            />
-            <Reveal delay={i * 0.08}>
-              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                <h3 className="font-display text-lg font-semibold">{e.title}</h3>
-                {e.dates ? <p className="font-mono text-xs text-dim">{e.dates}</p> : null}
+          <li key={e.id} className="py-8 first:pt-0 last:pb-0">
+            <Reveal delay={i * 0.05}>
+              <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+                <h3 className="font-display text-3xl leading-tight">{e.title}</h3>
+                {e.dates ? <p className="label">{e.dates}</p> : null}
               </div>
-              <p className="mt-1 text-sm text-muted">
-                <span className="italic">{e.org}</span>
-                {e.meta ? <span className="text-dim"> · {e.meta}</span> : null}
+              <p className="mt-2 text-sm text-dim">
+                <span className="text-ink">{e.org}</span>
+                {e.meta ? <span> · {e.meta}</span> : null}
               </p>
               {e.bullets?.length ? (
-                <ul className="mt-3 space-y-2">
+                <ul className="mt-5 max-w-3xl space-y-3">
                   {e.bullets.map((b, j) => (
-                    <li key={j} className="flex gap-3 text-sm leading-relaxed text-muted">
-                      <span aria-hidden="true" className="mt-[0.55em] h-1 w-1 shrink-0 rounded-full bg-accent" />
+                    <li key={j} className="flex gap-3 text-[0.95rem] leading-relaxed text-muted">
+                      <span aria-hidden="true" className="mt-[0.7em] h-px w-3 shrink-0 bg-ink" />
                       <span>{b}</span>
                     </li>
                   ))}

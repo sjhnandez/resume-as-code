@@ -67,5 +67,5 @@ JSON → Typst mapping in `resume/render.typ`.
 ## Fonts
 
 `resume/fonts/` bundles Carlito (OFL, metrically compatible with Calibri) so the
-PDF build is deterministic on Linux. The site uses Space Grotesk / Inter /
-JetBrains Mono via @fontsource variable packages.
+PDF build is deterministic on Linux. The site uses Instrument Serif / Instrument
+Sans via @fontsource packages.

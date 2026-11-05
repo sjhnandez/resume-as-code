@@ -9,18 +9,16 @@ export function Education() {
 
   return (
     <Section id="education" index="05" title={s.title}>
-      <ul className="space-y-7">
+      <ul className="divide-y divide-line">
         {s.entries.map((e, i) => (
-          <li key={e.id}>
-            <Reveal delay={i * 0.06}>
-              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                <h3 className="font-display text-base font-semibold sm:text-lg">{e.title}</h3>
-                {e.dates ? <p className="font-mono text-xs text-dim">{e.dates}</p> : null}
+          <li key={e.id} className="py-5 first:pt-0 last:pb-0">
+            <Reveal delay={i * 0.04}>
+              <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+                <h3 className="font-display text-2xl leading-tight">{e.title}</h3>
+                {e.dates ? <p className="label">{e.dates}</p> : null}
               </div>
-              <p className="mt-1 text-sm text-muted">
-                <span className="italic">{e.org}</span>
-              </p>
-              {e.meta ? <p className="mt-0.5 text-xs text-dim">{e.meta}</p> : null}
+              <p className="mt-1.5 text-sm text-ink">{e.org}</p>
+              {e.meta ? <p className="mt-0.5 text-sm text-dim">{e.meta}</p> : null}
             </Reveal>
           </li>
         ))}
