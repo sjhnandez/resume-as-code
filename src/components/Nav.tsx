@@ -3,7 +3,7 @@ import { ui } from '../content/ui'
 import { useLang } from '../lib/lang'
 import { CvButtons } from './CvButtons'
 
-const anchorIds = ['about', 'experience', 'projects', 'skills', 'education'] as const
+const anchorIds = ['lab', 'about', 'experience', 'projects', 'skills', 'education'] as const
 
 export function Nav() {
   const { lang, setLang } = useLang()

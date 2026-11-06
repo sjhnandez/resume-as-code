@@ -5,6 +5,7 @@ export interface UiStrings {
   skip: string
   navLabel: string
   nav: {
+    lab: string
     about: string
     experience: string
     projects: string
@@ -33,6 +34,7 @@ export const ui: Record<Lang, UiStrings> = {
     skip: 'Skip to content',
     navLabel: 'Main navigation',
     nav: {
+      lab: 'routing-lab',
       about: 'About',
       experience: 'Experience',
       projects: 'Projects',
@@ -50,6 +52,7 @@ export const ui: Record<Lang, UiStrings> = {
     skip: 'Saltar al contenido',
     navLabel: 'Navegación principal',
     nav: {
+      lab: 'routing-lab',
       about: 'Perfil',
       experience: 'Experiencia',
       projects: 'Proyectos',

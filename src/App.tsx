@@ -3,6 +3,7 @@ import { ui } from './content/ui'
 import { LanguageProvider, useLang } from './lib/lang'
 import { Nav } from './components/Nav'
 import { Hero } from './components/Hero'
+import { Featured } from './components/Featured'
 import { About } from './components/About'
 import { Experience } from './components/Experience'
 import { Projects } from './components/Projects'
@@ -25,6 +26,7 @@ function Page() {
       <Nav />
       <main id="main">
         <Hero />
+        <Featured />
         <About />
         <Experience />
         <Projects />
