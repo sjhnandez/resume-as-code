@@ -36,6 +36,19 @@ describe.each(langs)('resume/data/%s.json', (lang) => {
     expect(new Set(ids).size, 'contact ids are unique').toBe(ids.length)
   })
 
+  it('features routing-lab with a live link and at least one point', () => {
+    expect(data.featured.title).toBeTruthy()
+    expect(data.featured.summary).toBeTruthy()
+    expect(data.featured.cta.label).toBeTruthy()
+    expect(data.featured.cta.href).toBe('https://lab.superseb.xyz')
+    expect(data.featured.source.href).toMatch(/^https:\/\//)
+    expect(data.featured.points.length).toBeGreaterThan(0)
+    for (const point of data.featured.points) {
+      expect(point.title, 'featured point title').toBeTruthy()
+      expect(point.text, 'featured point text').toBeTruthy()
+    }
+  })
+
   it('has all five sections, each titled, with a profile text', () => {
     expect(Object.keys(data.sections).sort()).toEqual([...sectionKeys].sort())
     for (const key of sectionKeys) {

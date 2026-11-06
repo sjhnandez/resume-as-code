@@ -37,6 +37,16 @@ export interface ProjectEntry extends Entry {
   links?: LinkItem[]
 }
 
+/** Site-only showcase band under the hero. The CV renderer ignores it. */
+export interface Featured {
+  eyebrow: string
+  title: string
+  summary: string
+  points: { title: string; text: string }[]
+  cta: LinkItem
+  source: LinkItem
+}
+
 export interface ResumeData {
   meta: {
     lang: Lang
@@ -47,6 +57,7 @@ export interface ResumeData {
   name: string
   role: string
   contacts: Contact[]
+  featured: Featured
   sections: {
     profile: { title: string; text: string }
     skills: { title: string; groups: SkillGroup[] }

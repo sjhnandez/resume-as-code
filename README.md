@@ -45,6 +45,7 @@ Skip the auto-deploy on a heavy/unsafe commit with `SKIP_DEPLOY=1 git commit ...
 Edit `resume/data/en.json` / `es.json` — everything else is generated. The schema:
 
 - `meta` (title/description for SEO — feeds `index.html` too), `name`, `role`, `contacts`
+- `featured` — the site-only showcase band under the hero (not in the CV)
 - `sections.profile.text` — the About paragraph
 - `sections.skills.groups[]` — label + chips
 - `sections.experience.entries[]` / `education.entries[]` — title/dates/org/meta/bullets

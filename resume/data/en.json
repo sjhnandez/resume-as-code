@@ -14,6 +14,18 @@
     { "id": "linkedin", "label": "linkedin.com/in/sj-hnandez", "href": "https://linkedin.com/in/sj-hnandez" },
     { "id": "github", "label": "github.com/sjhnandez", "href": "https://github.com/sjhnandez" }
   ],
+  "featured": {
+    "eyebrow": "Featured project · live",
+    "title": "routing-lab",
+    "summary": "Fault-injection testbench for the LiteLLM router behind this server's AI platform. It injects provider stalls, rate limits and failures, then proves with hard assertions what the client actually sees.",
+    "points": [
+      { "title": "Run the battery", "text": "Eight scenarios against a mocked upstream, with every stage streaming live." },
+      { "title": "Try the router", "text": "Send a message through the real gateway and see which deployment served it." },
+      { "title": "Read the evidence", "text": "Reports, run history and fleet probes from real runs." }
+    ],
+    "cta": { "label": "Try it live", "href": "https://lab.superseb.xyz" },
+    "source": { "label": "Source on GitHub", "href": "https://github.com/sjhnandez/routing-lab" }
+  },
   "sections": {
     "profile": {
       "title": "Profile",

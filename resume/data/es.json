@@ -14,6 +14,18 @@
     { "id": "linkedin", "label": "linkedin.com/in/sj-hnandez", "href": "https://linkedin.com/in/sj-hnandez" },
     { "id": "github", "label": "github.com/sjhnandez", "href": "https://github.com/sjhnandez" }
   ],
+  "featured": {
+    "eyebrow": "Proyecto destacado · en vivo",
+    "title": "routing-lab",
+    "summary": "Banco de pruebas de inyección de fallos para el router LiteLLM detrás de la plataforma de IA de este servidor. Inyecta bloqueos de proveedores, límites de tasa y fallos, y demuestra con aserciones estrictas lo que realmente ve el cliente.",
+    "points": [
+      { "title": "Ejecuta la batería", "text": "Ocho escenarios contra un upstream simulado, con cada etapa transmitida en vivo." },
+      { "title": "Prueba el router", "text": "Envía un mensaje por el gateway real y ve qué despliegue lo atendió." },
+      { "title": "Revisa la evidencia", "text": "Informes, historial de ejecuciones y sondeos de la flota a partir de ejecuciones reales." }
+    ],
+    "cta": { "label": "Pruébalo en vivo", "href": "https://lab.superseb.xyz" },
+    "source": { "label": "Código en GitHub", "href": "https://github.com/sjhnandez/routing-lab" }
+  },
   "sections": {
     "profile": {
       "title": "Perfil profesional",
