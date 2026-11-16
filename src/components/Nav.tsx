@@ -2,6 +2,9 @@ import { content } from '../content'
 import { ui } from '../content/ui'
 import { useLang } from '../lib/lang'
 import { CvButtons } from './CvButtons'
+import { ArrowLeftIcon } from './Icons'
+
+const PORTAL_URL = 'https://portal.superseb.xyz'
 
 const anchorIds = ['lab', 'about', 'experience', 'projects', 'skills', 'education'] as const
 
@@ -30,6 +33,15 @@ export function Nav() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <a
+            href={PORTAL_URL}
+            aria-label={t.portal}
+            title={t.portal}
+            className="inline-flex h-8 items-center gap-1.5 rounded-md border border-line px-2.5 text-xs whitespace-nowrap text-muted transition-colors hover:border-ink hover:text-ink"
+          >
+            <ArrowLeftIcon className="h-3.5 w-3.5" />
+            <span className="hidden lg:inline">{t.portal}</span>
+          </a>
           <div
             role="group"
             aria-label={t.lang.label}

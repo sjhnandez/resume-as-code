@@ -4,6 +4,8 @@ import type { Lang } from './types'
 export interface UiStrings {
   skip: string
   navLabel: string
+  /** Link back to the homelab launcher (portal.superseb.xyz). */
+  portal: string
   nav: {
     lab: string
     about: string
@@ -33,6 +35,7 @@ export const ui: Record<Lang, UiStrings> = {
   en: {
     skip: 'Skip to content',
     navLabel: 'Main navigation',
+    portal: 'Return to portal',
     nav: {
       lab: 'routing-lab',
       about: 'About',
@@ -51,6 +54,7 @@ export const ui: Record<Lang, UiStrings> = {
   es: {
     skip: 'Saltar al contenido',
     navLabel: 'Navegación principal',
+    portal: 'Volver al portal',
     nav: {
       lab: 'routing-lab',
       about: 'Perfil',
